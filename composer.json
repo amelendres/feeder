@@ -1,0 +1,30 @@
+{
+	"name" : "aa/feedimporter",
+	"description" : "Feed Import from a feed list",
+	"type" : "library",
+	"authors" : [{
+			"name" : "Al Fred Do",
+			"email" : "alfredo.melendres@gmail.com"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"AA\\FeedImporter\\" : "src/AA/FeedImporter"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"Tests\\" : "tests/"
+		}
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "^7",
+		"fzaninotto/faker" : "^1.8",
+		"codeception/base": "^2.5"
+	},
+	"minimum-stability" : "stable",
+	"license" : "MIT",
+	"require" : {
+		"ramsey/uuid" : "^3.8"
+	}
+}
