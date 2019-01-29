@@ -9,7 +9,7 @@
 	],
 	"autoload" : {
 		"psr-4" : {
-			"AA\\FeedImporter\\" : "src/AA/FeedImporter"
+			"Feeder\\" : "src/Feeder/"
 		}
 	},
 	"autoload-dev" : {
