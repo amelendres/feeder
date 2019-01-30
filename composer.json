@@ -1,6 +1,6 @@
 {
-	"name" : "aa/feedimporter",
-	"description" : "Feed Import from a feed list",
+	"name" : "amelendres/feeder",
+	"description" : "Feed Reader from XML, CSV feed resource",
 	"type" : "library",
 	"authors" : [{
 			"name" : "Al Fred Do",
