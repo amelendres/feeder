@@ -16,9 +16,19 @@ Read feed from local, http in different formats xml, csv, (json)
 
 **Read CSV feeds from local**
 
-`bin/import glorf`
+```
+$resource = new LocalResource('/absolute/path/to/csv/file');
+$feedReader = new CsvFeedReader($resource);
+$feedReader->read(); 
+```
 
 **Read XML feeds from Http**
+
+```
+$resource = new HttpResource('http://url.com/feed/xml');
+$feedReader = new XmlFeedReader($resource);
+$feedReader->read(); 
+```
 
 
 ### How to extend

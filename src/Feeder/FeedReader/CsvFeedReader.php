@@ -3,9 +3,6 @@ declare(strict_types=1);
 
 namespace Feeder\FeedReader;
 
-use Feeder\Resource\Resource;
-use Feeder\FeedReader\ReadsFeed;
-
 class CsvFeedReader extends FeedReader
 {
     public function read(): Array
