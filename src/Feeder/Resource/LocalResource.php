@@ -11,7 +11,7 @@ use Feeder\Resource\Exception\LocalResourceNotFoundException;
  *
  */
 class LocalResource extends Resource
-{   
+{       
     public function read(): String
     {
         $content = file_get_contents($this->url, true);

@@ -8,7 +8,6 @@ use Faker\Factory;
 
 class LocalResourceTest extends TestCase
 {
-    
     /**
      * @test
      */
