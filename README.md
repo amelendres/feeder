@@ -18,7 +18,7 @@ Read feed from local, http in different formats xml, csv, (json)
 
 ```
 $resource = new LocalResource('/absolute/path/to/csv/file');
-$feedReader = new CsvFeedReader($resource);
+$feedReader = new CsvFeedReader($resource, new Separator(PHP_EOL, ';'));
 $feedReader->read(); 
 ```
 
@@ -26,7 +26,7 @@ $feedReader->read();
 
 ```
 $resource = new HttpResource('http://url.com/feed/xml');
-$feedReader = new XmlFeedReader($resource);
+$feedReader = new XmlFeedReader($resource, new Separator('item', 'g', 'channel'));
 $feedReader->read(); 
 ```
 

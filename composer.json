@@ -24,6 +24,5 @@
 	"minimum-stability" : "stable",
 	"license" : "MIT",
 	"require" : {
-		"ramsey/uuid" : "^3.8"
 	}
 }
