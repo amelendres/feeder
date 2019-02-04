@@ -28,7 +28,7 @@ class HttpResource extends AbstractResource
         $statusCode = curl_getinfo($chanel, CURLINFO_HTTP_CODE);
         curl_close($chanel);
         
-        if ($statusCode !== RESOURCE_STATUS_OK) {
+        if ($statusCode !== Self::RESOURCE_STATUS_OK) {
             throw new HttpResourceNotFoundException($url);
         }
     }
