@@ -15,7 +15,7 @@ class LocalResourceTest extends TestCase
     {
         $this->expectException(LocalResourceNotFoundException::class);
         
-        new LocalResource('http://google.com');        
+        new LocalResource('http://google.com');
     }
 
     /**
@@ -26,7 +26,6 @@ class LocalResourceTest extends TestCase
         $faker = Factory::create();
 
         $resource = new LocalResource($faker->file('./'));
-        $this->assertNotNull($resource->read());    
+        $this->assertNotNull($resource->read());
     }
 }
-

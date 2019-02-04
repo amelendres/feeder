@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Feeder\Resource;
 
-Interface ReadsResource
+interface ReadsResource
 {
     public function read(): String;
 }

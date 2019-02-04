@@ -20,8 +20,6 @@ class CsvFeedReaderTest extends TestCase
         
         $resource = new LocalResource($faker->file('./'));
         $feedReader = new CsvFeedReader($resource, new Separator(PHP_EOL, ';'));
-        $this->assertNotNull($feedReader->read()[0]);    
+        $this->assertNotNull($feedReader->read()[0]);
     }
-
 }
-

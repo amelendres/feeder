@@ -5,8 +5,8 @@ namespace Feeder\Resource\Exception;
 
 class LocalResourceNotFoundException extends \Exception
 {
-    public function __construct(String $url){
+    public function __construct(String $url)
+    {
         parent::__construct($url);
     }
 }
-

@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Feeder\FeedReader;
 
 class Separator
-{    
+{
     /**
      * @var String
      */
@@ -21,9 +21,9 @@ class Separator
     private $fields;
 
     /**
-     * @param String   $feed   
-     * @param String   $fields   
-     * @param String|null $feeds   
+     * @param String   $feed
+     * @param String   $fields
+     * @param String|null $feeds
      */
     public function __construct(String $feed, String $fields, String $feeds=null)
     {
@@ -37,7 +37,7 @@ class Separator
      */
     public function feeds(): String
     {
-      return $this->feeds;
+        return $this->feeds;
     }
     
     /**
@@ -45,7 +45,7 @@ class Separator
      */
     public function feed(): String
     {
-      return $this->feed;
+        return $this->feed;
     }
     
     /**
@@ -53,7 +53,6 @@ class Separator
      */
     public function fields(): String
     {
-      return $this->fields;
+        return $this->fields;
     }
 }
-

@@ -42,10 +42,8 @@ class XmlFeedReaderTest extends TestCase
         
         $resource = new ReadsResourceMock();
         
-        $feedReader = new XmlFeedReader($resource->mock(), new Separator('item', 'g','channel'));
+        $feedReader = new XmlFeedReader($resource->mock(), new Separator('item', 'g', 'channel'));
         $resource->shouldRead($xml);
         $this->assertEquals(8, count($feedReader->read()[0]));
-        
     }
 }
-

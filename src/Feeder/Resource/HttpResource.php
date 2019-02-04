@@ -6,13 +6,13 @@ namespace Feeder\Resource;
 use Feeder\Resource\Exception\HttpResourceNotFoundException;
 
 /**
- * 
+ *
  * @author AA
  *
  */
 class HttpResource extends AbstractResource
-{   
-    CONST RESOURCE_STATUS_OK = 200;
+{
+    const RESOURCE_STATUS_OK = 200;
     
     public function read(): String
     {
@@ -28,9 +28,8 @@ class HttpResource extends AbstractResource
         $statusCode = curl_getinfo($chanel, CURLINFO_HTTP_CODE);
         curl_close($chanel);
         
-        if($statusCode !== RESOURCE_STATUS_OK){
+        if ($statusCode !== RESOURCE_STATUS_OK) {
             throw new HttpResourceNotFoundException($url);
         }
     }
 }
-

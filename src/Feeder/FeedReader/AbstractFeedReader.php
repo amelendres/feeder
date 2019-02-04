@@ -18,7 +18,7 @@ abstract class AbstractFeedReader implements ReadsFeed
     protected $separator;
     
     /**
-     * 
+     *
      * @param ReadsResource $resource
      * @param array $separator [feeds, feed, field] CSV [PHP_EOL, ';']   XML ['channel', 'item', 'g']
      */
@@ -28,27 +28,26 @@ abstract class AbstractFeedReader implements ReadsFeed
         $this->separator= $separator;
     }
     
-    public abstract function read(): Array; 
+    abstract public function read(): array;
     
-    public abstract function parseFeed($feed): Array;
+    abstract public function parseFeed($feed): array;
 
     /**
      * @return ReadsResource
      */
     public function resource(): ReadsResource
     {
-      return $this->resource;
+        return $this->resource;
     }
     
     public function separator(): Separator
     {
-      return $this->separator;
+        return $this->separator;
     }
     
     public function update(ReadsResource $resource, Separator $separator): void
     {
         $this->resource = $resource;
-        $this->separator = $separator;  
+        $this->separator = $separator;
     }
 }
-

@@ -6,12 +6,12 @@ namespace Feeder\Resource;
 use Feeder\Resource\Exception\LocalResourceNotFoundException;
 
 /**
- * 
+ *
  * @author AA
  *
  */
 class LocalResource extends AbstractResource
-{       
+{
     public function read(): String
     {
         $content = file_get_contents($this->url, true);
@@ -20,9 +20,8 @@ class LocalResource extends AbstractResource
     
     public function assertUrl(String $url): void
     {
-        if(!is_file($url)){
+        if (!is_file($url)) {
             throw new LocalResourceNotFoundException($url);
         }
     }
 }
-

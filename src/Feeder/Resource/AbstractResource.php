@@ -5,29 +5,29 @@ namespace Feeder\Resource;
 
 abstract class AbstractResource implements ReadsResource
 {
-	/**
-	 * @var String
-	 */
-	protected $url;
+    /**
+     * @var String
+     */
+    protected $url;
 
-	/**
-	 * @param String $url 
-	 */
-	public function __construct(String $url)
-	{
-		$this->assertUrl($url);
-		$this->url = $url;
-	}
+    /**
+     * @param String $url
+     */
+    public function __construct(String $url)
+    {
+        $this->assertUrl($url);
+        $this->url = $url;
+    }
 
-    public abstract function read(): String;
+    abstract public function read(): String;
 
-    public abstract function assertUrl(String $url): void;
+    abstract public function assertUrl(String $url): void;
 
     /**
      * @return String
      */
     public function url(): String
     {
-      return $this->url;
+        return $this->url;
     }
 }

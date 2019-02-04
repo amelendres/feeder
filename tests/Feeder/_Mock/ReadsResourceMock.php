@@ -38,4 +38,3 @@ class ReadsResourceMock extends TestCase
         ->willReturn($return);
     }
 }
-

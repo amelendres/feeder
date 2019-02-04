@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Feeder\FeedReader;
 
-Interface ReadsFeed
+interface ReadsFeed
 {
-    public function read(): Array;
+    public function read(): array;
 }
