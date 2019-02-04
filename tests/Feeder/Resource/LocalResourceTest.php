@@ -14,7 +14,8 @@ class LocalResourceTest extends TestCase
     public function itShouldThrowLocalResourceNotFoundException()
     {
         $this->expectException(LocalResourceNotFoundException::class);
-        $resource = new LocalResource('http://google.com');        
+        
+        new LocalResource('http://google.com');        
     }
 
     /**

@@ -10,7 +10,7 @@ use Feeder\Resource\Exception\HttpResourceNotFoundException;
  * @author AA
  *
  */
-class LocalResource extends Resource
+class HttpResource extends AbstractResource
 {   
     CONST RESOURCE_STATUS_OK = 200;
     

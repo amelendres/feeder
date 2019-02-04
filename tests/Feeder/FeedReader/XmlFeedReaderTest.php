@@ -6,6 +6,7 @@ namespace Tests\Feeder\FeedReader;
 use PHPUnit\Framework\TestCase;
 use Feeder\FeedReader\XmlFeedReader;
 use Tests\Feeder\_Mock\ReadsResourceMock;
+use Feeder\FeedReader\Separator;
 
 class XmlFeedReaderTest extends TestCase
 {
@@ -41,7 +42,7 @@ class XmlFeedReaderTest extends TestCase
         
         $resource = new ReadsResourceMock();
         
-        $feedReader = new XmlFeedReader($resource->mock(), 'channel', 'item', 'g');
+        $feedReader = new XmlFeedReader($resource->mock(), new Separator('item', 'g','channel'));
         $resource->shouldRead($xml);
         $this->assertEquals(8, count($feedReader->read()[0]));
         

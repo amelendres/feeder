@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Feeder\Resource;
 
-abstract class Resource implements ReadsResource
+abstract class AbstractResource implements ReadsResource
 {
 	/**
 	 * @var String

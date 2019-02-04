@@ -10,7 +10,7 @@ use Feeder\Resource\Exception\LocalResourceNotFoundException;
  * @author AA
  *
  */
-class LocalResource extends Resource
+class LocalResource extends AbstractResource
 {       
     public function read(): String
     {

@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 use Feeder\Resource\LocalResource;
 use Feeder\FeedReader\CsvFeedReader;
 use Faker\Factory;
+use Feeder\FeedReader\Separator;
 
 class CsvFeedReaderTest extends TestCase
 {
@@ -18,7 +19,7 @@ class CsvFeedReaderTest extends TestCase
         $faker = Factory::create();
         
         $resource = new LocalResource($faker->file('./'));
-        $feedReader = new CsvFeedReader($resource);
+        $feedReader = new CsvFeedReader($resource, new Separator(PHP_EOL, ';'));
         $this->assertNotNull($feedReader->read()[0]);    
     }
 
