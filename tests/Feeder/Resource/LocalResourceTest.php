@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace Tests\Feeder\Resource;
 
 use PHPUnit\Framework\TestCase;
